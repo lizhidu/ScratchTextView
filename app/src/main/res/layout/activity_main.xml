@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#000fff"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <com.dlzh.scratchtextview.ScratchTextView
+        android:id="@+id/tv_Scratch"
+        android:layout_width="263dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="2dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="恭喜，再来一瓶"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+</LinearLayout>
