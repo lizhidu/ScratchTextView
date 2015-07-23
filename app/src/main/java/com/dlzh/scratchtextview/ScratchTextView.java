@@ -38,6 +38,7 @@ public class ScratchTextView extends TextView {
         super(context, attrs, defStyleAttr);
     }
 
+    //onDraw初始化的时候调用一次，然invalidate()的时候调用，
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -79,6 +80,7 @@ public class ScratchTextView extends TextView {
 
     }
 
+    //该触膜事件可以定义在调用的activity中实现
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!isInited) {
