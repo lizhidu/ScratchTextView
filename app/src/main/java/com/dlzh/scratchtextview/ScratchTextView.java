@@ -9,6 +9,7 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import android.widget.TextView;
  * Created by Dlzh on 2015-07-22.
  */
 public class ScratchTextView extends TextView {
+    private static final String TAG = "ScratchTextView";
     private Bitmap mbitmap;// 盖在字上面的图片
     private Canvas mCanvas; //画线的画布
     private Paint mPaint;//划线的画笔
@@ -89,6 +91,7 @@ public class ScratchTextView extends TextView {
                 mX = event.getX();
                 mY = event.getY();
                 invalidate();//更新界面
+                Log.d(TAG, mX + "|" + mY);
                 break;
             case MotionEvent.ACTION_MOVE:
                 //x和y移动的距离
@@ -101,6 +104,8 @@ public class ScratchTextView extends TextView {
                     // 第二次执行时，第一次结束调用的坐标值将作为第二次调用的初始坐标值
                     mX = event.getX();
                     mY = event.getY();
+                    Log.d(TAG, mX + "|" + mY);
+
                     invalidate();
                     break;
                 }
